@@ -14,17 +14,18 @@ const ExpensesChart = (props) => {
     const clothesWidth = (clothes * 100) / totalSum;
     const foodWidth = (food * 100) / totalSum;
     const commuteWidth = (commute* 100) / totalSum;
-
-    console.log(entertainmentWidth);
-    console.log(clothesWidth);
+    
+    const show = entertainmentWidth > 0 || clothesWidth > 0 || foodWidth > 0 || commuteWidth > 0;
     return (
         <Fragment>
-            <div className='Chart'>
-                <div style={{width: `${entertainmentWidth}%`}} className='Entertainment chart'><span>E</span></div>
-                <div style={{width: `${clothesWidth}%`}} className='Clothes chart'><span>C</span></div>
-                <div style={{width:`${foodWidth}%`}} className='Food chart'><span>F</span></div>
-                <div style={{width: `${commuteWidth}%`}} className='Commute chart'><span>Com</span></div>
-            </div>
+            {
+               show && <div className='Chart'>
+                    <div style={{width: `${entertainmentWidth}%`}} className='Entertainment chart'><span>E</span></div>
+                    <div style={{width: `${clothesWidth}%`}} className='Clothes chart'><span>C</span></div>
+                    <div style={{width:`${foodWidth}%`}} className='Food chart'><span>F</span></div>
+                    <div style={{width: `${commuteWidth}%`}} className='Commute chart'><span>Com</span></div>
+                </div>
+            }
             <div className='Legend'>
                 <div className='Entertainment l'> <span>Entertainment</span></div>
                 <div className='Clothes l'><span>Clothes</span></div>
