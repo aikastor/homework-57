@@ -1,0 +1,39 @@
+.Chart {
+    width: 500px;
+    display: inline-block;
+    height: 50px;
+    border: 1px solid grey;
+}
+.Chart > .chart {
+    display: inline-block;
+    height: 50px;
+}
+.Chart > .chart > span {
+    opacity: 0;
+}
+.Entertainment {
+    background: coral;
+}
+.Clothes {
+    background: blueviolet;
+}
+.Commute {
+    background: darkorange;
+}
+.Food {
+  background: greenyellow;
+}
+.Legend {
+    margin: 40px;
+}
+.l {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 10px;
+    position: relative;
+}
+.l > span {
+    position: absolute;
+    left: 120%;
+}

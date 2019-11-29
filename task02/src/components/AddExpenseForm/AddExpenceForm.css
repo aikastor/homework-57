@@ -1,0 +1,16 @@
+form > input[type = text], input[type=submit], input[type=number] {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    margin: 5px;
+}
+form > input[type=submit] {
+    background: #2196F3;
+    padding: 7px 10px;
+    color: #ffffff;
+
+}
+
+form > input[type=submit]:hover {
+    background-color: RoyalBlue;
+}
